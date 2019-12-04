@@ -1,0 +1,32 @@
+{
+  "name": "olympicss-github-io",
+  "description": "Like Olympics but for CSS",
+  "scripts": {
+    "start": "",
+    "test": "jest"
+  },
+  "dependencies": {
+    "lit-element": "2.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.14",
+    "husky": "3.1.0",
+    "jest": "24.9.0",
+    "lint-staged": "9.5.0",
+    "prettier": "1.19.1",
+    "ts-mockito": "2.5.0",
+    "typescript": "3.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
