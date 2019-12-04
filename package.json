@@ -2,7 +2,8 @@
   "name": "olympicss-github-io",
   "description": "Like Olympics but for CSS",
   "scripts": {
-    "start": "",
+    "start": "parcel src/ui/index.html",
+    "build": "parcel build src/ui/index.html",
     "test": "jest"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "husky": "3.1.0",
     "jest": "24.9.0",
     "lint-staged": "9.5.0",
+    "parcel-bundler": "1.12.4",
+    "parcel-plugin-webcomponents": "1.2.2",
     "prettier": "1.19.1",
     "ts-mockito": "2.5.0",
     "typescript": "3.7.3"
@@ -28,5 +31,9 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "browserslist": [
+    "Chrome > 50",
+    "not op_mini all"
+  ]
 }

@@ -1,7 +1,0 @@
-{
-  "name": "olympicss-github-io",
-  "short_name": "olympicss-github-io",
-  "description": "Like Olympics but for CSS",
-  "start_url": "/",
-  "display": "standalone"
-}

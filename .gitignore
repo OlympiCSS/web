@@ -1,7 +1,9 @@
 /node_modules
-/.pnp
-.pnp.js
 /coverage
+/dist
+/.idea
+/.vscode
+/.cache
 .DS_Store
 .env.local
 .env.development.local
@@ -10,5 +12,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/.idea
-/.vscode
+
