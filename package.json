@@ -8,17 +8,22 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src/**/*.ts",
     "lint:css": "stylelint \"src/**/*.ts\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "lit-element": "2.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
     "@babel/preset-typescript": "7.7.4",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-loader": "^8.0.6",
     "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
     "husky": "3.1.0",
