@@ -4,12 +4,14 @@
   "scripts": {
     "start": "parcel src/ui/index.html",
     "build": "parcel build src/ui/index.html",
-    "test": "jest"
+    "test": "jest --coverage",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "dependencies": {
     "lit-element": "2.2.1"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "7.7.4",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "husky": "3.1.0",
