@@ -1,3 +1,5 @@
+import './button'
+
 export default {
   title: 'Button'
 }

@@ -2,8 +2,8 @@ import { css, customElement, html, LitElement } from 'lit-element'
 
 @customElement(`app-button`)
 export class Button extends LitElement {
-  render() {
-    css`
+  static get styles() {
+    return css`
       .button {
         --button-color: var(--surface-color);
         border: 1px solid var(--primary-color);
@@ -12,7 +12,9 @@ export class Button extends LitElement {
         padding: var(--small) var(--medium);
       }
     `
+  }
 
+  render() {
     return html`
       <button class="button"><slot /></button>
     `
