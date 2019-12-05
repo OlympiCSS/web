@@ -1,6 +1,7 @@
 {
   "name": "olympicss-github-io",
   "description": "Like Olympics but for CSS",
+  "homepage": "https://github.com/Olimpicss/olympicss.github.io",
   "scripts": {
     "start": "parcel src/ui/index.html",
     "build": "parcel build src/ui/index.html",
@@ -10,13 +11,13 @@
     "lint:css": "stylelint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook"
   },
   "dependencies": {
     "lit-element": "2.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.4",
+    "@babel/core": "7.7.4",
     "@babel/preset-typescript": "7.7.4",
     "@storybook/web-components": "5.3.0-alpha.25",
     "@types/jest": "24.0.23",
@@ -24,9 +25,10 @@
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "awesome-typescript-loader": "5.2.1",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "8.0.6",
     "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
+    "gh-pages": "2.1.1",
     "husky": "3.1.0",
     "jest": "24.9.0",
     "lint-staged": "9.5.0",
