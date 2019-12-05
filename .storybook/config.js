@@ -1,4 +1,5 @@
 import { addParameters, configure } from '@storybook/web-components'
+import '../src/ui/reset.css'
 import '../src/ui/index.css'
 import '../src/ui/theme.css'
 
