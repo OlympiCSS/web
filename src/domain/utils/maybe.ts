@@ -2,18 +2,11 @@ export class Maybe<T> {
   private constructor(private value: T | null) {}
 
   static from<T>(value: T | undefined | null): Maybe<T> {
-    return this.isValid(value) ? Maybe.some(value as T) : Maybe.none<T>()
+    return this.isValid(value) ? new Maybe(value as T) : Maybe.none<T>()
   }
 
   static none<T>(): Maybe<T> {
     return new Maybe<T>(null)
-  }
-
-  private static some<T>(value: T): Maybe<T> {
-    if (!this.isValid(value)) {
-      throw new Error('Provided value must not be empty')
-    }
-    return new Maybe(value)
   }
 
   private static isValid(value: unknown | null | undefined): boolean {
@@ -36,7 +29,7 @@ export class Maybe<T> {
     if (this.value === null) {
       return Maybe.none<R>()
     } else {
-      return Maybe.some(f(this.value))
+      return Maybe.from(f(this.value))
     }
   }
 
