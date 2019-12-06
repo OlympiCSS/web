@@ -25,4 +25,8 @@ jobs:
       - name: build
         run: npm run build
       - name: deploy
-        run: npm run deploy
+      - uses: JamesIves/github-pages-deploy-action@3.0.4
+        with:
+          BASE_BRANCH: dev
+          BRANCH: master
+          FOLDER: dist
