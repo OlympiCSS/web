@@ -23,4 +23,4 @@ jobs:
       - name: test
         run: npm test
       - name: deploy
-        run: npm run ./node_modules/.bin/gh-pages -b master -d dist
+        run: gh-pages -b master -d dist
