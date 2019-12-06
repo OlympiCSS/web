@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-          with:
-            node-version: 'lts'
+        with:
+          node-version: '12.13.x'
       - uses: actions/cache@v1
         with:
           path: ~/.npm
