@@ -12,7 +12,8 @@
     "lint:css": "stylelint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook",
+    "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
     "lit-element": "2.2.1"

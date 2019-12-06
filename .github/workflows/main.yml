@@ -23,4 +23,4 @@ jobs:
       - name: test
         run: npm test
       - name: deploy
-        run: gh-pages -b master -d dist
+        run: npm run deploy
