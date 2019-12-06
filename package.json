@@ -12,8 +12,7 @@
     "lint:css": "stylelint \"src/**/*.ts\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
-    "deploy": "gh-pages -b master -d dist"
+    "storybook:build": "build-storybook"
   },
   "dependencies": {
     "lit-element": "2.2.1"
@@ -30,7 +29,6 @@
     "babel-loader": "8.0.6",
     "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
-    "gh-pages": "2.1.1",
     "husky": "3.1.0",
     "jest": "24.9.0",
     "lint-staged": "9.5.0",
