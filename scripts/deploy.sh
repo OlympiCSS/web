@@ -36,4 +36,4 @@ function _vcs_assert_all_changes_pushed() {
   fi
 }
 
-deploy()
+deploy
