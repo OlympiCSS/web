@@ -4,6 +4,7 @@
 /.idea
 /.vscode
 /.cache
+/storybook-static
 .DS_Store
 .env.local
 .env.development.local

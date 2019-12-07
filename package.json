@@ -1,7 +1,7 @@
 {
-  "name": "olympicss-github-io",
+  "name": "olympicss-web",
   "description": "Like Olympics but for CSS",
-  "homepage": "https://github.com/Olimpicss/olympicss.github.io",
+  "homepage": "https://github.com/OlimpiCSS/web",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/ui/index.html",

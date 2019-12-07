@@ -1,3 +1,3 @@
-# olympicss-github-io
+# OlympiCSS
 
 Like Olympics but for CSS
