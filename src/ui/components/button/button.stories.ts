@@ -4,4 +4,4 @@ export default {
   title: 'Button'
 }
 
-export const button = () => '<app-button>Hello world</app-button>'
+export const base = () => '<app-button>Hello world</app-button>'

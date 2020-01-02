@@ -17,7 +17,8 @@
     "deploy": "./scripts/deploy.sh deploy"
   },
   "dependencies": {
-    "lit-element": "2.2.1"
+    "lit-element": "2.2.1",
+    "lit-element-router": "2.0.0-rc.16"
   },
   "devDependencies": {
     "@babel/core": "7.7.7",

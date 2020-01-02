@@ -1,6 +1,6 @@
 import { css, customElement, html, LitElement } from 'lit-element'
 
-@customElement(`app-button`)
+@customElement('app-button')
 export class Button extends LitElement {
   static get styles() {
     return css`
