@@ -3,6 +3,6 @@ import './index.css'
 import './theme.css'
 
 import './components'
-import './features'
+import './features/home/home'
 import './outlet'
 import './app'
