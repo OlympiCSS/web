@@ -34,11 +34,198 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.css=exports.unsafeCSS=exports.CSSResult=exports.supportsAdoptingStyleSheets=void 0;const e="adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype;exports.supportsAdoptingStyleSheets=e;const t=Symbol();class s{constructor(e,s){if(s!==t)throw new Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e}get styleSheet(){return void 0===this._styleSheet&&(e?(this._styleSheet=new CSSStyleSheet,this._styleSheet.replaceSync(this.cssText)):this._styleSheet=null),this._styleSheet}toString(){return this.cssText}}exports.CSSResult=s;const r=e=>new s(String(e),t);exports.unsafeCSS=r;const o=e=>{if(e instanceof s)return e.cssText;if("number"==typeof e)return e;throw new Error(`Value passed to 'css' function must be a 'css' function result: ${e}. Use 'unsafeCSS' to pass non-literal values, but\n            take care to ensure page security.`)},n=(e,...r)=>{const n=r.reduce((t,s,r)=>t+o(s)+e[r+1],e[0]);return new s(n,t)};exports.css=n;
 },{}],"AInt":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e={LitElement:!0,html:!0,svg:!0,TemplateResult:!0,SVGTemplateResult:!0};Object.defineProperty(exports,"html",{enumerable:!0,get:function(){return o.html}}),Object.defineProperty(exports,"svg",{enumerable:!0,get:function(){return o.svg}}),Object.defineProperty(exports,"TemplateResult",{enumerable:!0,get:function(){return o.TemplateResult}}),Object.defineProperty(exports,"SVGTemplateResult",{enumerable:!0,get:function(){return o.SVGTemplateResult}}),exports.LitElement=void 0;var t=require("lit-html"),r=require("lit-html/lib/shady-render.js"),s=require("./lib/updating-element.js");Object.keys(s).forEach(function(t){"default"!==t&&"__esModule"!==t&&(Object.prototype.hasOwnProperty.call(e,t)||Object.defineProperty(exports,t,{enumerable:!0,get:function(){return s[t]}}))});var n=require("./lib/decorators.js");Object.keys(n).forEach(function(t){"default"!==t&&"__esModule"!==t&&(Object.prototype.hasOwnProperty.call(e,t)||Object.defineProperty(exports,t,{enumerable:!0,get:function(){return n[t]}}))});var o=require("lit-html/lit-html.js"),i=require("./lib/css-tag.js");function l(e,t=[]){for(let r=0,s=e.length;r<s;r++){const s=e[r];Array.isArray(s)?l(s,t):t.push(s)}return t}Object.keys(i).forEach(function(t){"default"!==t&&"__esModule"!==t&&(Object.prototype.hasOwnProperty.call(e,t)||Object.defineProperty(exports,t,{enumerable:!0,get:function(){return i[t]}}))}),(window.litElementVersions||(window.litElementVersions=[])).push("2.2.1");const a=e=>e.flat?e.flat(1/0):l(e);class d extends s.UpdatingElement{static finalize(){super.finalize.call(this),this._styles=this.hasOwnProperty(JSCompiler_renameProperty("styles",this))?this._getUniqueStyles():this._styles||[]}static _getUniqueStyles(){const e=this.styles,t=[];if(Array.isArray(e)){a(e).reduceRight((e,t)=>(e.add(t),e),new Set).forEach(e=>t.unshift(e))}else e&&t.push(e);return t}initialize(){super.initialize(),this.renderRoot=this.createRenderRoot(),window.ShadowRoot&&this.renderRoot instanceof window.ShadowRoot&&this.adoptStyles()}createRenderRoot(){return this.attachShadow({mode:"open"})}adoptStyles(){const e=this.constructor._styles;0!==e.length&&(void 0===window.ShadyCSS||window.ShadyCSS.nativeShadow?i.supportsAdoptingStyleSheets?this.renderRoot.adoptedStyleSheets=e.map(e=>e.styleSheet):this._needsShimAdoptedStyleSheets=!0:window.ShadyCSS.ScopingShim.prepareAdoptedCssText(e.map(e=>e.cssText),this.localName))}connectedCallback(){super.connectedCallback(),this.hasUpdated&&void 0!==window.ShadyCSS&&window.ShadyCSS.styleElement(this)}update(e){super.update(e);const r=this.render();r instanceof t.TemplateResult&&this.constructor.render(r,this.renderRoot,{scopeName:this.localName,eventContext:this}),this._needsShimAdoptedStyleSheets&&(this._needsShimAdoptedStyleSheets=!1,this.constructor._styles.forEach(e=>{const t=document.createElement("style");t.textContent=e.cssText,this.renderRoot.appendChild(t)}))}render(){}}exports.LitElement=d,d.finalized=!0,d.render=r.render;
-},{"lit-html":"zUh2","lit-html/lib/shady-render.js":"onlA","./lib/updating-element.js":"xgJI","./lib/decorators.js":"QCBo","lit-html/lit-html.js":"zUh2","./lib/css-tag.js":"ZfrT"}],"EVxB":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.App=void 0;var e=require("lit-element"),t=function(e,t,r,o){var p,l=arguments.length,n=l<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)n=Reflect.decorate(e,t,r,o);else for(var c=e.length-1;c>=0;c--)(p=e[c])&&(n=(l<3?p(n):l>3?p(t,r,n):p(t,r))||n);return l>3&&n&&Object.defineProperty(t,r,n),n};let r=class extends e.LitElement{render(){return e.html`
-      <p>Hello</p>
-    `}};exports.App=r,exports.App=r=t([(0,e.customElement)("olympicss-app")],r);
-},{"lit-element":"AInt"}],"QCba":[function(require,module,exports) {
-"use strict";require("./reset.css"),require("./index.css"),require("./theme.css"),require("./app");
-},{"./reset.css":"AQoi","./index.css":"AQoi","./theme.css":"AQoi","./app":"EVxB"}]},{},["QCba"], null)
-//# sourceMappingURL=/ui.9830e662.js.map
+},{"lit-html":"zUh2","lit-html/lib/shady-render.js":"onlA","./lib/updating-element.js":"xgJI","./lib/decorators.js":"QCBo","lit-html/lit-html.js":"zUh2","./lib/css-tag.js":"ZfrT"}],"SN6A":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Button=void 0;var t=require("lit-element"),e=function(t,e,r,o){var n,l=arguments.length,i=l<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(l<3?n(i):l>3?n(e,r,i):n(e,r))||i);return l>3&&i&&Object.defineProperty(e,r,i),i};let r=class extends t.LitElement{static get styles(){return t.css`
+      .button {
+        font-size: inherit;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        border-radius: 999px;
+        padding: var(--small) var(--medium);
+        cursor: pointer;
+        transition: var(--fast-transition);
+        outline: none;
+      }
+
+      .button:hover {
+        color: var(--on-primary-color);
+        background-color: var(--primary-color);
+      }
+    `}render(){return t.html`
+      <button class="button"><slot /></button>
+    `}};exports.Button=r,exports.Button=r=e([(0,t.customElement)("app-button")],r);
+},{"lit-element":"AInt"}],"e3JH":[function(require,module,exports) {
+"use strict";function e(e){for(;1!==e.length&&"/"===e.substr(-1);)e=e.substr(0,e.length-1);return e}function t(e){return e?JSON.parse('{"'+e.substring(1).replace(/&/g,'","').replace(/=/g,'":"')+'"}'):{}}function r(e,t){let r={};const s=e.split("/").filter(e=>""!=e),n=t.split("/").filter(e=>""!=e);return s.map((e,t)=>{/^:/.test(e)&&(r[e.substring(1)]=n[t])}),r}function s(e){return e?new RegExp("^(|/)"+e.replace(/:[^\s/]+/g,"([\\wÀ-ÖØ-öø-ÿ-]+)")+"(|/)$"):new RegExp("(^$|^/$)")}function n(e,t){if(s(t).test(e))return!0}Object.defineProperty(exports,"__esModule",{value:!0}),exports.stripExtraTrailingSlash=e,exports.parseQuery=t,exports.parseParams=r,exports.patternToRegExp=s,exports.testRoute=n;
+},{}],"M7bf":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.router=e,exports.navigator=a,exports.outlet=o;var t=require("./utility/router-utility");function e(e){return class extends e{static get properties(){return{route:{type:String,reflect:!0,attribute:"route"},canceled:{type:Boolean}}}constructor(...t){super(...t),this.route="",this.canceled=!1}connectedCallback(...t){super.connectedCallback(...t),this.routing(this.constructor.routes,(...t)=>this.router(...t)),window.addEventListener("route",()=>{this.routing(this.constructor.routes,(...t)=>this.router(...t))}),window.onpopstate=(()=>{window.dispatchEvent(new CustomEvent("route"))})}routed(t,e,a,o,r,i){i&&i(t,e,a,o),r(t,e,a,o)}routing(e,a){this.canceled=!0;const o=decodeURI(window.location.pathname),r=decodeURI(window.location.search);let i=e.filter(t=>"*"===t.pattern)[0],n=e.filter(e=>"*"!==e.pattern&&(0,t.testRoute)(o,e.pattern))[0],u=(0,t.parseQuery)(r);n?(n.params=(0,t.parseParams)(n.pattern,o),n.data=n.data||{},n.authentication&&n.authentication.authenticate&&"function"==typeof n.authentication.authenticate?(this.canceled=!1,Promise.resolve(n.authentication.authenticate()).then(t=>{this.canceled||(t?n.authorization&&n.authorization.authorize&&"function"==typeof n.authorization.authorize?(this.canceled=!1,Promise.resolve(n.authorization.authorize()).then(t=>{this.canceled||(t?this.routed(n.name,n.params,u,n.data,a,n.callback):this.routed(n.authorization.unauthorized.name,n.params,u,n.data,a,n.callback))})):this.routed(n.name,n.params,u,n.data,a,n.callback):this.routed(n.authentication.unauthenticated.name,n.params,u,n.data,a,n.callback))})):n.authorization&&n.authorization.authorize&&"function"==typeof n.authorization.authorize?(this.canceled=!1,Promise.resolve(n.authorization.authorize()).then(t=>{this.canceled||(t?this.routed(n.name,n.params,u,n.data,a,n.callback):this.routed(n.authorization.unauthorized.name,n.params,u,n.data,a,n.callback))})):this.routed(n.name,n.params,u,n.data,a,n.callback)):i&&(i.data=i.data||{},this.routed(i.name,{},u,i.data,a,i.callback))}}}function a(t){return class extends t{navigate(t){window.history.pushState({},null,t),window.dispatchEvent(new CustomEvent("route"))}}}function o(t){return class extends t{static get properties(){return{activeRoute:{type:String,reflect:!0,attribute:"active-route"}}}attributeChangedCallback(...t){super.attributeChangedCallback(...t),t.some(t=>"active-route"===t)&&this.outlet()}connectedCallback(...t){super.connectedCallback(...t),setImmediate(()=>{this.outlet()})}outlet(){Array.from(this.querySelectorAll("[route]")).map(t=>{t.style.display="none"}),Array.from(this.shadowRoot.querySelectorAll("[route]")).map(t=>{t.style.display="none"}),this.activeRoute&&(Array.from(this.querySelectorAll(`[route~=${this.activeRoute}]`)).map(t=>{t.style.display=""}),Array.from(this.shadowRoot.querySelectorAll(`[route~=${this.activeRoute}]`)).map(t=>{t.style.display=""}))}}}
+},{"./utility/router-utility":"e3JH"}],"Rois":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Link=void 0;var e=require("lit-element"),t=require("lit-element-router"),r=function(e,t,r,i){var n,o=arguments.length,l=o<3?t:null===i?i=Object.getOwnPropertyDescriptor(t,r):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)l=Reflect.decorate(e,t,r,i);else for(var c=e.length-1;c>=0;c--)(n=e[c])&&(l=(o<3?n(l):o>3?n(t,r,l):n(t,r))||l);return o>3&&l&&Object.defineProperty(t,r,l),l};let i=class extends e.LitElement{linkClick(e){e.preventDefault(),this.navigate(this.to)}render(){return e.html`
+      <a href="${this.to}" @click="${this.linkClick}"><slot /></a>
+    `}};exports.Link=i,r([(0,e.property)({type:String})],i.prototype,"to",void 0),exports.Link=i=r([t.navigator],i),customElements.define("app-link",i);
+},{"lit-element":"AInt","lit-element-router":"M7bf"}],"sqzf":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Logo=void 0;var e=require("lit-element"),t=function(e,t,r,o){var s,i=arguments.length,a=i<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(e,t,r,o);else for(var n=e.length-1;n>=0;n--)(s=e[n])&&(a=(i<3?s(a):i>3?s(t,r,a):s(t,r))||a);return i>3&&a&&Object.defineProperty(t,r,a),a};let r=class extends e.LitElement{static get styles(){return e.css`
+      :root {
+        --cutout: 48%; /* 50%, fix for Chrome clip-path */
+      }
+
+      .semi {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        border: 15px solid var(--color);
+      }
+
+      .blue .semi {
+        --color: var(--primary-color);
+      }
+
+      .red .semi {
+        --color: var(--quinary-color);
+      }
+
+      .black .semi {
+        --color: var(--quaternary-color);
+      }
+
+      .gold .semi {
+        --color: var(--secondary-color);
+      }
+
+      .green .semi {
+        --color: var(--tertiary-color);
+      }
+
+      .logo {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        justify-content: center;
+      }
+
+      .ring {
+        --size: 200px;
+
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+      }
+
+      .first {
+        clip-path: inset(0 var(--cutout) 0 0);
+      }
+      .second {
+        clip-path: inset(0 0 0 var(--cutout));
+      }
+
+      .ontop {
+        z-index: 5;
+      }
+      .onbottom {
+        z-index: -5;
+      }
+
+      .rotate45 {
+        transform: rotate(45deg);
+      }
+
+      .up {
+        transform: translateY(-75px);
+      }
+
+      .animated {
+        transform-origin: 50% 0;
+        animation: move 2.5s ease-in-out;
+      }
+
+      @keyframes move {
+        0% {
+          transform: rotate(-35deg) translateY(-75px);
+        }
+
+        30% {
+          transform: rotate(80deg) translateY(-75px);
+        }
+
+        50% {
+          transform: rotate(-25deg) translateY(-75px);
+        }
+
+        70% {
+          transform: rotate(55deg) translateY(-75px);
+        }
+
+        90% {
+          transform: rotate(-5deg) translateY(-75px);
+        }
+
+        100% {
+          transform: rotate(0deg) translateY(-75px);
+        }
+      }
+    `}render(){return e.html`
+      <div class="logo">
+        <div class="ring blue">
+          <div class="first semi ontop"></div>
+          <div class="second semi onbottom"></div>
+        </div>
+        <div class="ring black">
+          <div class="first semi rotate45"></div>
+          <div class="second semi rotate45 ontop"></div>
+        </div>
+        <div class="ring red">
+          <div class="first semi rotate45 ontop"></div>
+          <div class="second semi rotate45"></div>
+        </div>
+        <div class="ring gold up">
+          <div class="first semi"></div>
+          <div class="second semi"></div>
+        </div>
+        <div class="ring green up animated">
+          <div class="first semi"></div>
+          <div class="second semi"></div>
+        </div>
+      </div>
+    `}};exports.Logo=r,exports.Logo=r=t([(0,e.customElement)("app-logo")],r);
+},{"lit-element":"AInt"}],"dN23":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Input=void 0;var e=require("lit-element"),t=function(e,t,r,o){var n,i=arguments.length,p=i<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)p=Reflect.decorate(e,t,r,o);else for(var l=e.length-1;l>=0;l--)(n=e[l])&&(p=(i<3?n(p):i>3?n(t,r,p):n(t,r))||p);return i>3&&p&&Object.defineProperty(t,r,p),p};let r=class extends e.LitElement{constructor(){super(...arguments),this.placeholder="",this.value=""}static get styles(){return e.css`
+      .input {
+        font-size: inherit;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        border-radius: 999px;
+        padding: var(--small) var(--medium);
+        cursor: pointer;
+        transition: var(--fast-transition);
+        outline: none;
+      }
+    `}render(){return e.html`
+      <input class="input" .value="${this.value}" .placeholder="${this.placeholder}" @input="${this.handleInput}"><slot /></input>
+    `}handleInput(e){const t=new CustomEvent("input",{detail:{value:e.target.value}});this.dispatchEvent(t)}};exports.Input=r,t([(0,e.property)({type:String})],r.prototype,"placeholder",void 0),t([(0,e.property)({type:String})],r.prototype,"value",void 0),exports.Input=r=t([(0,e.customElement)("app-input")],r);
+},{"lit-element":"AInt"}],"jY8R":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.NotFound=void 0;var e=require("lit-element"),t=function(e,t,o,r){var n,l=arguments.length,s=l<3?t:null===r?r=Object.getOwnPropertyDescriptor(t,o):r;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,o,r);else for(var c=e.length-1;c>=0;c--)(n=e[c])&&(s=(l<3?n(s):l>3?n(t,o,s):n(t,o))||s);return l>3&&s&&Object.defineProperty(t,o,s),s};let o=class extends e.LitElement{static get styles(){return e.css``}render(){return e.html`
+      <h1>Not found</h1>
+    `}};exports.NotFound=o,exports.NotFound=o=t([(0,e.customElement)("app-not-found")],o);
+},{"lit-element":"AInt"}],"iVTS":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"Button",{enumerable:!0,get:function(){return e.Button}}),Object.defineProperty(exports,"Link",{enumerable:!0,get:function(){return t.Link}}),Object.defineProperty(exports,"Logo",{enumerable:!0,get:function(){return r.Logo}}),Object.defineProperty(exports,"Input",{enumerable:!0,get:function(){return n.Input}}),Object.defineProperty(exports,"NotFound",{enumerable:!0,get:function(){return o.NotFound}});var e=require("./button/button"),t=require("./link/link"),r=require("./logo/logo"),n=require("./input/input"),o=require("./not-found/not-found");
+},{"./button/button":"SN6A","./link/link":"Rois","./logo/logo":"sqzf","./input/input":"dN23","./not-found/not-found":"jY8R"}],"XIBC":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Home=void 0;var e=require("lit-element"),t=function(e,t,r,o){var l,n=arguments.length,s=n<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,r,o);else for(var c=e.length-1;c>=0;c--)(l=e[c])&&(s=(n<3?l(s):n>3?l(t,r,s):l(t,r))||s);return n>3&&s&&Object.defineProperty(t,r,s),s};let r=class extends e.LitElement{static get styles(){return e.css``}render(){return e.html`
+      <main><h1>Hello world</h1></main>
+    `}};exports.Home=r,exports.Home=r=t([(0,e.customElement)("app-home")],r);
+},{"lit-element":"AInt"}],"LHzw":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Outlet=void 0;var e=require("lit-element"),t=require("lit-element-router"),r=function(e,t,r,l){var o,n=arguments.length,u=n<3?t:null===l?l=Object.getOwnPropertyDescriptor(t,r):l;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)u=Reflect.decorate(e,t,r,l);else for(var s=e.length-1;s>=0;s--)(o=e[s])&&(u=(n<3?o(u):n>3?o(t,r,u):o(t,r))||u);return n>3&&u&&Object.defineProperty(t,r,u),u};let l=class extends e.LitElement{render(){return e.html`
+      <slot></slot>
+    `}};exports.Outlet=l,exports.Outlet=l=r([t.outlet],l),customElements.define("app-outlet",l);
+},{"lit-element":"AInt","lit-element-router":"M7bf"}],"EVxB":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.App=void 0;var e=require("lit-element"),t=require("lit-element-router"),r=function(e,t,r,o){var p,n=arguments.length,u=n<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)u=Reflect.decorate(e,t,r,o);else for(var l=e.length-1;l>=0;l--)(p=e[l])&&(u=(n<3?p(u):n>3?p(t,r,u):p(t,r))||u);return n>3&&u&&Object.defineProperty(t,r,u),u};let o=class extends e.LitElement{constructor(){super(...arguments),this.route=""}static get routes(){return[{name:"home",pattern:""},{name:"not-found",pattern:"*"}]}router(e){this.route=e}render(){return e.html`
+      <app-link to="/">Home</app-link>
+
+      <app-outlet active-route=${this.route}>
+        <app-home route="home"></app-home>
+        <app-not-found route="not-found"></app-not-found>
+      </app-outlet>
+    `}};exports.App=o,exports.App=o=r([(0,e.customElement)("olympicss-app"),t.router],o);
+},{"lit-element":"AInt","lit-element-router":"M7bf"}],"QCba":[function(require,module,exports) {
+"use strict";require("./reset.css"),require("./index.css"),require("./theme.css"),require("./components"),require("./features/home/home"),require("./outlet"),require("./app");
+},{"./reset.css":"AQoi","./index.css":"AQoi","./theme.css":"AQoi","./components":"iVTS","./features/home/home":"XIBC","./outlet":"LHzw","./app":"EVxB"}]},{},["QCba"], null)
+//# sourceMappingURL=/ui.8741c81a.js.map
