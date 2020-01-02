@@ -30,3 +30,4 @@ jobs:
           BASE_BRANCH: dev
           BRANCH: master
           FOLDER: dist
+          CLEAN: true
