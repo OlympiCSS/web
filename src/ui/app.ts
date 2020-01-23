@@ -25,8 +25,6 @@ export class App extends LitElement {
 
   render() {
     return html`
-      <app-link to="/">Home</app-link>
-
       <app-outlet active-route=${this.route}>
         <app-home route="home"></app-home>
         <app-not-found route="not-found"></app-not-found>

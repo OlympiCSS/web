@@ -39,7 +39,7 @@ export class Logo extends LitElement {
       .logo {
         display: flex;
         flex-wrap: wrap;
-        width: 600px;
+        width: var(--logo-width, 600px);
         justify-content: center;
       }
 

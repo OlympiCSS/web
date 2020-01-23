@@ -1,7 +1,14 @@
+html {
+  font-size: 112.5%;
+} /*18px*/
+
 body {
   margin: 0;
   font-family: var(--body-font);
-  font-size: var(--body-text-size);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
 }

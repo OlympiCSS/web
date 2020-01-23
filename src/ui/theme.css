@@ -16,10 +16,12 @@
   --small: 0.5rem;
   --medium: 1rem;
   --big: 2rem;
+  --large: 4rem;
 
-  --body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
-  --title-font: var(--body-font);
+  --content-width: 40rem;
+
+  --body-font: 'Raleway', sans-serif;
+  --title-font: 'Source Sans Pro', sans-serif;
 
   --body-text-size: 18px;
   --title-text-size: 24px;
