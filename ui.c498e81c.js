@@ -448,4 +448,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"lit-element":"AInt","lit-element-router":"M7bf"}],"QCba":[function(require,module,exports) {
 "use strict";require("./index.css"),require("./theme.css"),require("./components"),require("./features/home"),require("./outlet"),require("./app");
 },{"./index.css":"vKFU","./theme.css":"vKFU","./components":"iVTS","./features/home":"Gjdp","./outlet":"LHzw","./app":"EVxB"}]},{},["QCba"], null)
-//# sourceMappingURL=/ui.c498e81c.js.map
+//# sourceMappingURL=web/ui.c498e81c.js.map
