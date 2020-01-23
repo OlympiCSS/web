@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/ui/index.html",
-    "build": "parcel build src/ui/index.html --public-url /",
+    "build": "parcel build src/ui/index.html --public-url /web/",
     "test": "jest --coverage",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src/**/*.ts",
