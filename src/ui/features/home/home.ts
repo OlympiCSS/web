@@ -6,6 +6,7 @@ export class Home extends LitElement {
     return html`
       <app-page>
         <app-hero slot="header"></app-hero>
+        <app-tracks></app-tracks>
       </app-page>
     `
   }
