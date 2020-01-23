@@ -269,61 +269,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
     `}};exports.Text=r,exports.Text=r=t([(0,e.customElement)("app-text")],r);
 },{"lit-element":"AInt"}],"iVTS":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"Button",{enumerable:!0,get:function(){return e.Button}}),Object.defineProperty(exports,"Link",{enumerable:!0,get:function(){return t.Link}}),Object.defineProperty(exports,"Logo",{enumerable:!0,get:function(){return r.Logo}}),Object.defineProperty(exports,"Input",{enumerable:!0,get:function(){return n.Input}}),Object.defineProperty(exports,"NotFound",{enumerable:!0,get:function(){return o.NotFound}}),Object.defineProperty(exports,"Page",{enumerable:!0,get:function(){return u.Page}}),Object.defineProperty(exports,"Title",{enumerable:!0,get:function(){return i.Title}}),Object.defineProperty(exports,"Text",{enumerable:!0,get:function(){return p.Text}});var e=require("./button/button"),t=require("./link/link"),r=require("./logo/logo"),n=require("./input/input"),o=require("./not-found/not-found"),u=require("./page/page"),i=require("./title/title"),p=require("./text/text");
-},{"./button/button":"SN6A","./link/link":"Rois","./logo/logo":"sqzf","./input/input":"dN23","./not-found/not-found":"jY8R","./page/page":"sVtY","./title/title":"rwap","./text/text":"L9DY"}],"XIBC":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Home=void 0;var e=require("lit-element"),t=function(e,t,r,o){var p,l=arguments.length,n=l<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)n=Reflect.decorate(e,t,r,o);else for(var a=e.length-1;a>=0;a--)(p=e[a])&&(n=(l<3?p(n):l>3?p(t,r,n):p(t,r))||n);return l>3&&n&&Object.defineProperty(t,r,n),n};let r=class extends e.LitElement{render(){return e.html`
-      <app-page>
-        <app-hero slot="header"></app-hero>
-      </app-page>
-    `}};exports.Home=r,exports.Home=r=t([(0,e.customElement)("app-home")],r);
-},{"lit-element":"AInt"}],"X0cl":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Hero=void 0;var e=require("lit-element"),t=function(e,t,r,o){var i,n=arguments.length,s=n<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,r,o);else for(var a=e.length-1;a>=0;a--)(i=e[a])&&(s=(n<3?i(s):n>3?i(t,r,s):i(t,r))||s);return n>3&&s&&Object.defineProperty(t,r,s),s};let r=class extends e.LitElement{static get styles(){return e.css`
-      .hero {
-        display: flex;
-        justify-content: center;
-
-        position: relative;
-        min-height: 100vh;
-      }
-
-      .header {
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-top: var(--large);
-      }
-
-      .introduction {
-        margin-top: var(--large);
-        max-width: var(--content-width);
-      }
-
-      .flames {
-        display: flex;
-        position: absolute;
-        min-width: 2500px;
-        height: 120vh;
-        z-index: -1;
-      }
-    `}render(){return e.html`
-      <header class="hero">
-        <div>
-          <section class="header">
-            <app-logo></app-logo>
-            <app-title>OlympiCSS</app-title>
-            <app-text><em>—Like</em> OlympiCSS but for CSS—</app-text>
-          </section>
-          <section class="introduction">
-            <app-text>
-              Compete with other <strong>web designers</strong> coding the same website in 45 minutes. Explain the reasoning behind the
-              choices you make with <strong>layout</strong>, <strong>styling</strong> and <strong>markup</strong>. Let’s learn together!
-            </app-text>
-          </section>
-        </div>
-        <app-flames class="flames"></app-flames>
-      </header>
-    `}};exports.Hero=r,exports.Hero=r=t([(0,e.customElement)("app-hero")],r);
-},{"lit-element":"AInt"}],"BkN0":[function(require,module,exports) {
+},{"./button/button":"SN6A","./link/link":"Rois","./logo/logo":"sqzf","./input/input":"dN23","./not-found/not-found":"jY8R","./page/page":"sVtY","./title/title":"rwap","./text/text":"L9DY"}],"BkN0":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Flames=void 0;var e=require("lit-element"),t=function(e,t,l,i){var r,s=arguments.length,a=s<3?t:null===i?i=Object.getOwnPropertyDescriptor(t,l):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(e,t,l,i);else for(var o=e.length-1;o>=0;o--)(r=e[o])&&(a=(s<3?r(a):s>3?r(t,l,a):r(t,l))||a);return s>3&&a&&Object.defineProperty(t,l,a),a};let l=class extends e.LitElement{static get styles(){return e.css`
       :host {
         width: 100%;
@@ -379,7 +325,116 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
         </defs>
       </svg>
     `}};exports.Flames=l,exports.Flames=l=t([(0,e.customElement)("app-flames")],l);
-},{"lit-element":"AInt"}],"LHzw":[function(require,module,exports) {
+},{"lit-element":"AInt"}],"X0cl":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Hero=void 0;var e=require("lit-element"),t=function(e,t,r,o){var i,n=arguments.length,s=n<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,r,o);else for(var a=e.length-1;a>=0;a--)(i=e[a])&&(s=(n<3?i(s):n>3?i(t,r,s):i(t,r))||s);return n>3&&s&&Object.defineProperty(t,r,s),s};let r=class extends e.LitElement{static get styles(){return e.css`
+      .hero {
+        display: flex;
+        justify-content: center;
+
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: var(--large);
+      }
+
+      .introduction {
+        margin-top: var(--large);
+        max-width: var(--content-width);
+      }
+
+      .flames {
+        display: flex;
+        position: absolute;
+        min-width: 2500px;
+        height: 120vh;
+        z-index: -1;
+      }
+    `}render(){return e.html`
+      <header class="hero">
+        <div>
+          <section class="header">
+            <app-logo></app-logo>
+            <app-title>OlympiCSS</app-title>
+            <app-text><em>—Like</em> OlympiCSS but for CSS—</app-text>
+          </section>
+          <section class="introduction">
+            <app-text>
+              Compete with other <strong>web designers</strong> coding the same website in 45 minutes. Explain the reasoning behind the
+              choices you make with <strong>layout</strong>, <strong>styling</strong> and <strong>markup</strong>. Let’s learn together!
+            </app-text>
+          </section>
+        </div>
+        <app-flames class="flames"></app-flames>
+      </header>
+    `}};exports.Hero=r,exports.Hero=r=t([(0,e.customElement)("app-hero")],r);
+},{"lit-element":"AInt"}],"hoXh":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Tracks=void 0;var t=require("lit-element"),e=function(t,e,r,s){var C,i=arguments.length,o=i<3?e:null===s?s=Object.getOwnPropertyDescriptor(e,r):s;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(t,e,r,s);else for(var l=t.length-1;l>=0;l--)(C=t[l])&&(o=(i<3?C(o):i>3?C(e,r,o):C(e,r))||o);return i>3&&o&&Object.defineProperty(e,r,o),o};let r=class extends t.LitElement{static get styles(){return t.css`
+      :host {
+        width: 100%;
+        height: 100%;
+        transform: translateY(-200px);
+        display: block;
+        position: relative;
+        z-index: -2;
+      }
+    `}render(){return t.html`
+      <svg viewBox="0 0 1055 2937" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M732.292 2907.38H727.252V2914H724.66V2907.38H710.44V2905.5L723.796 2888.8H726.676L713.788 2905.07H724.732V2899.24H727.252V2905.07H732.292V2907.38Z"
+          fill="white"
+        />
+        <path d="M439.856 2888.8V2914H437.264V2891.1H431.324V2888.8H439.856Z" fill="white" />
+        <path
+          d="M538.08 2911.7V2914H520.404V2912.16L530.88 2901.9C532.2 2900.61 533.088 2899.49 533.544 2898.56C534.024 2897.6 534.264 2896.64 534.264 2895.68C534.264 2894.19 533.748 2893.04 532.716 2892.22C531.708 2891.38 530.256 2890.96 528.36 2890.96C525.408 2890.96 523.116 2891.9 521.484 2893.77L519.648 2892.18C520.632 2891.03 521.88 2890.14 523.392 2889.52C524.928 2888.9 526.656 2888.58 528.576 2888.58C531.144 2888.58 533.172 2889.2 534.66 2890.42C536.172 2891.62 536.928 2893.28 536.928 2895.39C536.928 2896.68 536.64 2897.93 536.064 2899.13C535.488 2900.33 534.396 2901.71 532.788 2903.27L524.22 2911.7H538.08Z"
+          fill="white"
+        />
+        <path
+          d="M624.44 2899.6C627.08 2899.74 629.084 2900.46 630.452 2901.76C631.844 2903.03 632.54 2904.7 632.54 2906.76C632.54 2908.2 632.192 2909.49 631.496 2910.62C630.8 2911.72 629.768 2912.6 628.4 2913.24C627.032 2913.89 625.364 2914.22 623.396 2914.22C621.572 2914.22 619.844 2913.93 618.212 2913.35C616.604 2912.75 615.308 2911.96 614.324 2910.98L615.584 2908.92C616.424 2909.79 617.54 2910.5 618.932 2911.05C620.324 2911.58 621.812 2911.84 623.396 2911.84C625.46 2911.84 627.056 2911.4 628.184 2910.51C629.312 2909.6 629.876 2908.35 629.876 2906.76C629.876 2905.2 629.312 2903.98 628.184 2903.09C627.056 2902.2 625.352 2901.76 623.072 2901.76H621.272V2899.85L628.256 2891.1H615.368V2888.8H631.568V2890.64L624.44 2899.6Z"
+          fill="white"
+        />
+        <path
+          d="M794 96C794 96 1114 622.5 440 1296.5C56.3074 1680.19 224.193 2094.19 440 2379.64C603.283 2595.61 598.5 2933.5 598.5 2933.5"
+          stroke="#0494E2"
+          stroke-width="370"
+        />
+        <path
+          d="M769 96C769 96 1089 622.5 415 1296.5C31.3075 1680.19 199.193 2094.19 415 2379.64C578.283 2595.61 573.5 2933.5 573.5 2933.5"
+          stroke="#0081C7"
+          stroke-width="370"
+        />
+        <path
+          d="M863 96C863 96 1183 622.5 509 1296.5C125.308 1680.19 293.193 2094.19 509 2379.64C672.283 2595.61 667.5 2933.5 667.5 2933.5"
+          stroke="white"
+          stroke-width="5"
+        />
+        <path
+          d="M769 96C769 96 1089 622.5 415 1296.5C31.3075 1680.19 199.193 2094.19 415 2379.64C578.283 2595.61 573.5 2933.5 573.5 2933.5"
+          stroke="white"
+          stroke-width="5"
+        />
+        <path
+          d="M684 96C684 96 1004 622.5 330 1296.5C-53.6927 1680.19 114.192 2094.19 330 2379.64C493.283 2595.61 488.5 2933.5 488.5 2933.5"
+          stroke="white"
+          stroke-width="5"
+        />
+      </svg>
+    `}};exports.Tracks=r,exports.Tracks=r=e([(0,t.customElement)("app-tracks")],r);
+},{"lit-element":"AInt"}],"XIBC":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Home=void 0;var e=require("lit-element"),t=function(e,t,r,o){var p,a=arguments.length,l=a<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)l=Reflect.decorate(e,t,r,o);else for(var c=e.length-1;c>=0;c--)(p=e[c])&&(l=(a<3?p(l):a>3?p(t,r,l):p(t,r))||l);return a>3&&l&&Object.defineProperty(t,r,l),l};let r=class extends e.LitElement{render(){return e.html`
+      <app-page>
+        <app-hero slot="header"></app-hero>
+        <app-tracks></app-tracks>
+      </app-page>
+    `}};exports.Home=r,exports.Home=r=t([(0,e.customElement)("app-home")],r);
+},{"lit-element":"AInt"}],"Gjdp":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),Object.defineProperty(exports,"Flames",{enumerable:!0,get:function(){return e.Flames}}),Object.defineProperty(exports,"Hero",{enumerable:!0,get:function(){return r.Hero}}),Object.defineProperty(exports,"Tracks",{enumerable:!0,get:function(){return t.Tracks}}),Object.defineProperty(exports,"Home",{enumerable:!0,get:function(){return n.Home}});var e=require("./flames"),r=require("./hero"),t=require("./tracks"),n=require("./home");
+},{"./flames":"BkN0","./hero":"X0cl","./tracks":"hoXh","./home":"XIBC"}],"LHzw":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Outlet=void 0;var e=require("lit-element"),t=require("lit-element-router"),r=function(e,t,r,l){var o,n=arguments.length,u=n<3?t:null===l?l=Object.getOwnPropertyDescriptor(t,r):l;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)u=Reflect.decorate(e,t,r,l);else for(var s=e.length-1;s>=0;s--)(o=e[s])&&(u=(n<3?o(u):n>3?o(t,r,u):o(t,r))||u);return n>3&&u&&Object.defineProperty(t,r,u),u};let l=class extends e.LitElement{render(){return e.html`
       <slot></slot>
     `}};exports.Outlet=l,exports.Outlet=l=r([t.outlet],l),customElements.define("app-outlet",l);
@@ -391,6 +446,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
       </app-outlet>
     `}};exports.App=o,exports.App=o=r([(0,e.customElement)("olympicss-app"),t.router],o);
 },{"lit-element":"AInt","lit-element-router":"M7bf"}],"QCba":[function(require,module,exports) {
-"use strict";require("./index.css"),require("./theme.css"),require("./components"),require("./features/home/home"),require("./features/home/hero"),require("./features/home/flames"),require("./outlet"),require("./app");
-},{"./index.css":"vKFU","./theme.css":"vKFU","./components":"iVTS","./features/home/home":"XIBC","./features/home/hero":"X0cl","./features/home/flames":"BkN0","./outlet":"LHzw","./app":"EVxB"}]},{},["QCba"], null)
-//# sourceMappingURL=/ui.228c2132.js.map
+"use strict";require("./index.css"),require("./theme.css"),require("./components"),require("./features/home"),require("./outlet"),require("./app");
+},{"./index.css":"vKFU","./theme.css":"vKFU","./components":"iVTS","./features/home":"Gjdp","./outlet":"LHzw","./app":"EVxB"}]},{},["QCba"], null)
+//# sourceMappingURL=/ui.c498e81c.js.map
