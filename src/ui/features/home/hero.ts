@@ -29,7 +29,7 @@ export class Hero extends LitElement {
         display: flex;
         position: absolute;
         min-width: 2500px;
-        height: 150vh;
+        height: 120vh;
         z-index: -1;
       }
     `
@@ -42,7 +42,7 @@ export class Hero extends LitElement {
           <section class="header">
             <app-logo></app-logo>
             <app-title>OlympiCSS</app-title>
-            <app-text><em>Like</em> OlympiCSS but for CSS</app-text>
+            <app-text><em>—Like</em> OlympiCSS but for CSS—</app-text>
           </section>
           <section class="introduction">
             <app-text>
